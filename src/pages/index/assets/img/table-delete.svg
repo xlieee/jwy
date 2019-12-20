@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>编组 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="购物车" transform="translate(-1557.000000, -519.000000)" stroke="#0B2444" stroke-width="1.8">
+            <g id="编组-7" transform="translate(1558.000000, 520.000000)">
+                <path d="M6,0.5 L12.0629883,0.5" id="路径-7" stroke-linecap="round"></path>
+                <path d="M0,3.5 L18,3.5" id="路径-8" stroke-linecap="round"></path>
+                <path d="M2.04516602,4.5 L2.04516602,17.3100586 C2.04516602,18.4146281 2.94059652,19.3100586 4.04516602,19.3100586 L14.045166,19.3100586 C15.1497355,19.3100586 16.045166,18.4146281 16.045166,17.3100586 L16.045166,4.5" id="路径-9"></path>
+                <path d="M9,8 L9,14.2986816" id="路径-10" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+.searchList-no-text{
+  background: #fff;
+  overflow: hidden;
+  min-height: calc(100vh - 600px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 167px;
+    height: 167px;
+  }
+  p{
+    font-size: 16px;
+    color: #303133;
+    span{
+      color: $active
+    }
+  }
+}

@@ -1,0 +1,522 @@
+ul,li {
+  list-style: none;
+}
+.ellipsis {
+  @extend %ellipsis;
+}
+.flex{
+  &-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.modal-body-scrollable {
+  .ivu-modal-body {
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+  }
+}
+.option-span {
+  float: right;
+  color: #ccc;
+  @extend %ellipsis;
+}
+
+.custom-btn-group {
+  text-align: right;
+  .btn {
+    margin-left: 20px;
+    width: 100px;
+  }
+  .btn-cancel {
+    background-color: #EBEEF5;
+  }
+  .btn-ok {
+    color: #fff;
+    background-color: #F66F6A;
+    &:hover,
+    &:active {
+      border-color: #F66F6A;
+    }
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(246, 111, 106, 0.2);
+    }
+  }
+}
+
+// icon
+%icon-sprites {
+  display: inline-block;
+  background: url('../assets/img/icon_sprites.png') no-repeat;
+  cursor: pointer;
+}
+.icon-sprites-g1 {
+  margin: 2px 3px;
+  width: 23px;
+  height: 23px;
+  @extend %icon-sprites;
+  &:hover {
+    background-position-y: -47px;
+  }
+}
+.icon-top {
+  background-position: -181px -243px;
+  &:hover {
+    background-position-y: -283px;
+  }
+}
+.icon-offtop {
+  background-position: -225px -243px;
+  &:hover {
+    background-position-y: -283px;
+  }
+}
+.icon-detail {
+  background-position: -11px -8px;
+  &:hover {
+    background-position-y: -46px;
+  }
+}
+.icon-doc {
+  background-position: -58px -8px;
+  &:hover {
+    background-position-y: -46px;
+  }
+}
+.icon-online {
+  background-position: -150px -9px;
+}
+.icon-offline {
+  background-position: -105px -9px;
+}
+.icon-moveup{
+  background-position: -310px -243px;
+  &:not(.not-allowed):hover {
+    background-position-y: -283px;
+  }
+}
+.icon-movedown {
+  background-position: -268px -243px;
+  &:not(.not-allowed):hover {
+    background-position-y: -283px;
+  }
+}
+.icon-config {
+  background-position: -196px -9px;
+}
+.icon-apply {
+  background-position: -243px -9px;
+}
+.icon-lock {
+  background-position: -335px -8px;
+  &:hover {
+    background-position-y: -46px;
+  }
+}
+.icon-edit {
+  background-position: -381px -9px;
+}
+.icon-del {
+  background-position: -428px -9px;
+}
+.icon-permission {
+  background-position: -472px -9px;
+}
+.icon-show-doc {
+  background-position: -517px -8px;
+}
+
+.icon-sprites-small {
+  margin: 0 5px;
+  width: 18px;
+  height: 18px;
+  vertical-align: text-bottom;
+  @extend %icon-sprites;
+}
+.icon-add-small {
+  background-position: -14px -88px;
+}
+.icon-moveup-small {
+  background-position: -152px -120px;
+  &:not(.not-allowed):hover {
+    background-position-y: -88px;
+  }
+}
+.icon-movedown-small {
+  background-position: -61px -120px;
+  &:not(.not-allowed):hover {
+    background-position-y: -88px;
+  }
+}
+.icon-del-small {
+  background-position: -106px -120px;
+  &:hover {
+    background-position-y: -88px;
+  }
+}
+.icon-recall {
+  width: 24px;
+  background-position: -443px -245px;
+  &:hover {
+    background-position-y: -285px;
+  }
+}
+
+// table
+
+.table-column-fix {
+  .ivu-table-cell {
+    padding-top: 6px;
+  }
+}
+
+// radio
+.radio-fix {
+  .ivu-radio-wrapper {
+    margin-right: 24px;
+  }
+}
+
+
+
+.keys-btn {
+  color: #fff;
+  background-color: $keys-color;
+  &:hover,
+  &:active {
+    border-color: $keys-color;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(246, 111, 106, 0.2);
+  }
+}
+
+.icon-sprites-g2 {
+  margin-right: 6px;
+  width: 21px;
+  height: 21px;
+  vertical-align: -4px;
+  @extend %icon-sprites;
+}
+.icon_g2-submit {
+  background-position: -192px -165px;
+}
+.icon_g2-save {
+  background-position: -12px -165px;
+}
+.icon_g2-approval {
+  background-position: -59px -165px;
+}
+.icon_g2-add {
+  background-position: -106px -165px;
+}
+.icon_g2-forward {
+  background-position: -153px -165px;
+}
+
+
+.modal-fullscreen-fix {
+  .ivu-modal-footer {
+    border-top: none;
+    box-shadow:0px -2px 20px 0px rgba(11,36,68,0.1);
+  }
+  .ivu-modal-header {
+    background-color: #F8FBFF;
+    border-bottom: none;
+  }
+  
+  .ivu-modal-footer {
+    .btn140 {
+      width: 140px;
+    }
+    .btn-cancel {
+      background-color: #EBEEF5;
+    }
+    .btn-ok {
+      @extend .keys-btn;
+    }
+    .btn-group {
+      button {
+        width: 120px;
+        background-color: #F5F7FA;
+        border-color: #F8FBFF;
+        &:not(:last-child) {
+          transition: none;
+          &:hover {
+            color: #fff;
+            background-color: $keys-color;
+            .icon-sprites-g2  {
+              background-position-y: -195px;
+            }
+          }
+          &:active {
+            border-color: $keys-color;
+          }
+          &:focus {
+            box-shadow: 0 0 0 2px rgba(246, 111, 106, 0.2);
+          }
+        }
+      }
+      .btn-cancel {
+        @extend .keys-btn;
+      }
+    }
+  }
+}
+
+.ivu-table-cell {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.icon-required:before {
+  content: url('../assets/img/icon_required.svg');
+
+  vertical-align: text-bottom;
+  transform: scale(.8);
+}
+.ivu-form-item-required .ivu-form-item-label {
+  @extend .icon-required;
+}
+.ivu-radio-inner:after {
+  border-radius: 50%;
+}
+.ivu-form .ivu-form-item-label {
+  font-size: 16px;
+}
+textarea.ivu-input {
+  font-size: 16px;
+}
+
+// modal组件fix------------------------------------------------------------------------
+.modal-fix {
+  .ivu-modal-footer {
+    padding-top: 0;
+    
+    text-align: center;
+    border-top: none;
+
+    button {
+      width: 96px;
+      height: 40px;
+      & + button {
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+// card组件fix-------------------------------------------------------------------
+.card-table-fix {
+  > .ivu-card-body {
+    padding: 16px 12px;
+  }
+  .page-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 16px;
+  }
+}
+.card-fix-style {
+  .ivu-card-head {
+    padding-left: 2px; 
+    padding-right: 0;
+    border-bottom: none;
+    p {
+      font-weight: 600;
+    }
+  }
+  .ivu-card-extra {
+    right: 2px;
+    top: 10px;
+  }
+  .ivu-card-body {
+    padding: 0;
+  }
+}
+
+.card-fix {
+  // .ivu-card-head {
+  //   padding: 12px 16px;
+  // }
+  // .card-title {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  
+  //   font-size: 16px;
+  //   color: rgb(23, 35, 61);
+  
+  .btn-small-fix {
+    height: 26px;
+    font-size: 12px;
+  }
+  .ivu-card-body {
+    @extend %scroll;
+  }
+  // }
+}
+// 搜索条件样式----------------------------------------------------------------
+.query-block {
+  display: inline-block;
+  margin: 0 20px 10px 0;
+
+  .label {
+    display: inline-block;
+    width: 80px;
+    font-size: 16px;
+  }
+
+}
+.add-block {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+
+  text-align: right;
+}
+
+
+.textarea-label-fix {
+  .ivu-form-item-label {
+    padding-top: 2px;
+  }
+}
+
+.form-title {
+  padding: 20px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #17233D;
+  &-fix {
+    font-size: 16px;
+  }
+}
+
+.tooltip-fix {
+  .ivu-tooltip-inner {
+    color: $theme-color;
+  }
+}
+.ivu-card {
+  border-radius: 2px;
+}
+.ivu-page-prev, 
+.ivu-page-next {
+  background-color: #F0F2F5;
+  border-color: #F0F2F5;
+}
+.ivu-page-item {
+  background-color: #F0F2F5;
+  border-color: #F0F2F5;
+  &-active {
+    background-color: $theme-color;
+    a {
+      color: #fff;
+    }
+    &:hover {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.sub-title {
+  &:before,
+  &:after {
+    content: none;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 0 16px;
+  height: 28px;
+  font-size: 15px;
+  .icon-required:before {
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 1;
+    font-size: 14px;
+  }
+}
+
+.icon-btn-upload {
+  padding: 2px;
+  margin-right: 4px;
+  font-size: 12px;
+  vertical-align: baseline;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.upload-list {
+  display: flex;
+  padding: 10px 0;
+  .item {
+    padding: 5px 10px;
+    margin-right: 6px;
+    border-radius: 2px;
+    border: 1px solid #b4b6b8;
+  }
+  .ivu-icon {
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+
+
+.ivu-table-wrapper > .ivu-spin-fix {
+  border: none;
+}
+
+.ivu-alert-icon {
+  font-size: 18px;
+}
+
+.clear-padding {
+  .ivu-modal-body {
+    padding: 0;
+  }
+}
+
+.tooltip-ellipsis {
+  width: 100%;
+  .ivu-tooltip-rel {
+    vertical-align: middle;
+    @extend %ellipsis;
+  }
+}
+
+.badge-fix-table {
+  .ivu-badge-status-dot {
+    width: 8px;
+    height: 8px;
+  }
+  .ivu-badge-status-text {
+    font-size: 16px;
+  }
+}
+
+.vertical-center-modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ivu-modal{
+      top: 0;
+  }
+}
+.ivu-steps .ivu-steps-content {
+  font-size: 15px;
+}

@@ -1,0 +1,220 @@
+
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>海联捷讯-登录</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+      }
+
+      .lh-banner{
+        width:100vw; 
+        height:100vh; 
+        background-repeat:no-repeat; 
+        background-position:center center; 
+        position:relative; 
+        background-size:cover;
+        overflow:hidden; 
+        display:flex; 
+        align-items:center; 
+        justify-content:center;
+        background-image: url('<%= BASE_URL %>static/img/bg_login.jpg');
+      }
+      .lh-banner:before{
+        content:''; 
+        display:block; 
+        width:100%; 
+        height:100%; 
+        background:rgba(0,0,0,.4); 
+        position:absolute; 
+        left:0; 
+        top:0;
+      }
+      /* .login{
+        background: url('<%= BASE_URL %>/assets/img/login-baclground.jpg') no-repeat center center;
+        position: relative;
+      } */
+      .login-pic{
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      .loginForm{
+          width: 440px;
+          background: #fff;
+          box-shadow:0px 6px 14px 0px rgba(11,36,68,0.1);
+          border-radius:4px;
+          position: absolute;
+          top: calc((100% - 455px) / 2);
+          right: 12%;
+          padding: 50px 40px;
+          z-index: 999;
+          
+      }
+      #errmsg{
+        position: absolute;
+        color: #F66F6A;
+        top: 265px;
+      }
+      .loginForm  h2{
+        text-align: center;
+        font-size:24px;
+        font-weight:500;
+        color:#0B2444;
+        line-height:40px;
+        margin-bottom: 40px;
+      }
+      .loginForm input{
+        display: block;
+        width:100%;
+        height: 55px;
+        text-indent: 1em;
+        font-size:18px;
+        border-radius: 4px;
+        margin-bottom: 24px;
+        border: 1px solid #dcdee2;
+      }
+      .loginForm input:last-of-type{
+        margin-bottom: 0
+      }  
+      .loginForm input::placeholder{
+        color: #C0C4CC;
+        font-size: 16px;
+      }
+      .forget{
+        float:right;
+        font-size:14px;
+        color:#0B2444;
+        cursor:pointer;
+        margin-bottom: 24px;
+      } 
+      .submitBtn{
+        background: #F66F6A;
+        width: 100%;
+        height: 55px;
+        font-size: 18px;
+        color: #fff;
+        border: 0;
+        opacity: 0.9;
+        border-radius: 4px;
+        margin-top: 30px;
+      }
+      .modal-mask{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background-color: rgba(55, 55, 55, 0.6);
+        z-index: 1003;
+        display: none;
+      }
+      .modal{
+        position: absolute;
+        top: -100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: #fff;
+        width: 520px;
+        height: 204px;
+      }
+      .modal-head{
+        height: 60px;
+        border-bottom: 1px solid #E9E9E9;
+        padding: 14px 16px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      .modal-head span{
+        font-size: 18px;
+        color: #303133;
+        font-weight: 600;
+      }
+      .modal-head img{
+        float: right;
+        cursor: pointer;
+      }
+      .forgetText{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+      }
+      .forgetText img{
+        margin-right: 33px;
+      }
+      .forgetText p{
+        margin-top: -10px;
+        font-size:18px;
+        font-weight:600;
+        color:#303133;
+      }
+
+      canvas {
+        display:block;
+      }
+      .waves {
+        position:absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+      }
+    </style>
+    <script src="<%= BASE_URL %>custom.js"></script>
+</head>
+<body>
+
+<main class="lh-main">
+    <section class="lh-banner">
+      <div class="login lh-banner">
+        <img src="<%= BASE_URL %>static/img/pic_login-d1.png" alt="" class="login-pic">
+        <div class="loginForm">
+          <h2>账户登录</h2>
+          <input type="text" id="user" placeholder="请输入账号">
+          <input type="password" id="pwd" placeholder="请输入密码">
+          <p id="errmsg"></p>
+          <button class="submitBtn" id="submit" type="button">登 录</button>
+          <p style='font-size:14px;line-height:34px;margin-top:20px;color:#575D6C;text-align:center' id="forgetText">忘记密码，请联系管理员！010-11111111</p>
+        </div>
+      </div>
+    </section>
+    <div class="modal-mask" id="modal">
+      <div class="modal">
+        <div class="modal-head">
+          <span>系统提示</span>
+          <img src="<%= BASE_URL %>static/img/icon_login-close.png" alt="" id="close">
+        </div>
+        <div class="modal-content">
+          <div class="forgetText">
+            <img src="<%= BASE_URL %>static/img/icon_login-forget.svg" alt="">
+            <p class="modal-text">忘记密码，请联系管理员！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+
+<div class="waves"></div>
+</body>
+</html>

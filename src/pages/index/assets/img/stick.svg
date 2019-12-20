@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>编组 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="新闻资讯" transform="translate(-321.000000, -379.000000)">
+            <g id="编组-3" transform="translate(321.000000, 378.000000)">
+                <rect id="矩形" stroke="#F66F6A" fill="#F66F6A" x="0.5" y="1.5" width="29" height="16" rx="2"></rect>
+                <text id="置顶" font-family="PingFangSC-Regular, PingFang SC" font-size="13" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="2" y="14">置顶</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

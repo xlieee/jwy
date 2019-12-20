@@ -1,0 +1,47 @@
+$theme-color  : #5E7CE0;
+$keys-color   : #F66F6A;
+$main-bg      : #f5f7f9;
+$app-min-width: 1300px;
+// index
+$baseColor1: #fff;
+$subColor1: rgba(255,255,255,.7);
+
+$baseColor2: #252B30;
+$subColor2: #575D6C;
+
+$headBackground:#0B2444;
+$headColor:#fff;
+
+$active:#F66F6A;
+
+$btnColor:#5E7CE0;
+$btnShadow: 0px 4px 10px 0px rgba(94, 124, 224, 0.5);
+
+$mainWidth: 1280px;
+
+$pageIndexleftOffset: 80;
+$pageIndexRightOffset: 64;
+$pageIndexTopOffset: 64;
+
+%ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+%ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+%scroll {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,534 @@
+.application{
+  min-height: calc(100vh - 223px);
+  background: #F1F3FE;
+  .product-v6-banner{
+    height: 513px;
+    .product-banner-pc-wrapper{
+      position: absolute;
+      top: 80px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 436px;
+      overflow: hidden;
+    }
+    .product-banner-pc-bg{
+      background-color: #152247;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 493px;
+      transform: translate(0px, -60px) scale(1);
+      transform-origin: center bottom;
+      background-size: cover;
+      transition: all 0.5s ease 0s;
+      position: relative;
+      background-image: url('../../assets/img/application-bg.png');
+      transform: translate(0px, -59.7059px) scale(1);
+      .product-banner-pc-bg-inner{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .banner-position{
+    position: absolute;
+    top: 140px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 374px;
+    padding-top: 0;
+  }
+  .application-banner{
+    width: 100%;
+    height: 372px;
+    background-size: cover;
+    
+    .context{
+      margin: 0 auto;
+      width: $mainWidth;
+      padding-top: 90px;
+      color: #fff;
+      font-weight:500;
+      position: relative;
+      h2{
+        color: #fff;
+        font-size:40px;
+        line-height:56px;
+        font-weight: 400;
+      }
+      p{
+        margin-top: 14px;
+        line-height:34px;
+        font-size: 16px;
+        width: 615px;
+      }
+    }
+    .star{
+      overflow: hidden;
+      img{
+        position: absolute;
+        animation: flash-data-v-661a5c8c 12s ease-out infinite;
+        opacity: 0;
+      }
+      .star0{
+        top: 115px;
+        left: 730px;
+        animation:lightning-data-v-661a5c8c 4s ease infinite alternate;
+        opacity: 0;
+        animation-delay:0s;
+      }
+      .star1{
+        top: 50px;
+        right: 0;
+        animation:lightning-data-v-661a5c8c 4s ease infinite alternate;
+        opacity: 0;
+        animation-delay:4s;
+      }
+      .star2{
+        top: 67px;
+        left: 790px;
+        animation-delay:0s;
+      }
+      .star3{
+        bottom: 0px;
+        left: 670px;
+        animation-delay:4s;
+      }
+      .star4{
+        bottom: -67px;
+        right: -10px;
+        animation-delay:8s
+      }
+    }
+  }
+  .application-tabs{
+    height: 70px;
+    background: #0B2444;
+    ul{
+      overflow: hidden;
+      width: $mainWidth;
+      margin: 0 auto;
+      li{
+        float: left;
+        line-height: 70px;
+        font-size:18px;
+        font-weight:500;
+        color: #fff;
+        margin-right: 90px;
+        cursor: pointer;
+        &:hover{
+          color: $active
+        }
+      }
+      .active{
+        color: $active;
+      }
+    }
+  }
+}
+.application-content{
+  background: #F1F3FE;
+  // min-height: 600px;
+}
+.application-iaas{
+  width: $mainWidth;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 46px;
+  .application-control{
+    overflow: hidden;
+    >span{
+      float: right;
+      width: 140px;
+      height: 44px;
+      background: $btnColor;
+      border-radius: 2px;
+      color: #fff;
+      line-height: 44px;
+      text-align: center;
+      font-size:16px;
+      margin: 17px 0 18px;
+      cursor: pointer;
+      &:hover{
+        background: $btnColor;
+        box-shadow:$btnShadow;
+      }
+    }
+    
+  }
+  .application-control-icon_0{
+    background: url('../../assets/img/application-control-icon_0.svg') no-repeat center center;
+    background-size: cover
+  }
+  .application-control-icon_1{
+    background: url('../../assets/img/application-control-icon_1.svg') no-repeat center center;
+    background-size: cover
+  }
+  .application-control-icon_2{
+    background: url('../../assets/img/application-control-icon_2.svg') no-repeat center center;
+    background-size: cover
+  }
+  .application-control-icon_3{
+    background: url('../../assets/img/application-control-icon_3.svg') no-repeat center center;
+    background-size: cover
+  }
+  .application-control-icon_4{
+    background: url('../../assets/img/application-control-icon_0.svg') no-repeat center center;
+    background-size: cover
+  }
+  .application-control-icon_5{
+    background: url('../../assets/img/application-control-icon_5.svg') no-repeat center center;
+    background-size: cover
+  }
+  .application-control-icon_6{
+    background: url('../../assets/img/application-control-icon_6.svg') no-repeat center center;
+    background-size: cover
+  }
+  .application-control-tab{
+    overflow: hidden;
+    float: left;
+    .application-control-tab-item{
+      font-size: 18px;
+      float: left;
+      height: 81px;
+      line-height: 85px;
+      margin-right:80px;
+      position: relative;
+      padding-left: 24px;
+      cursor: pointer;
+      &::after{
+        content: "";
+        position: absolute;
+        right: -40px;
+        height: 18px;
+        top: 32px;
+        border-right: 1px solid #DFE5F3;
+        padding: 0 20px;
+      }
+      &:last-of-type::after{
+        border: 0
+      }
+      &:hover{
+        color: $active;
+        .application-control-icon_0{
+          background: url('../../assets/img/application-control-icon-active_0.svg') no-repeat center center;
+          background-size: cover
+        }
+        .application-control-icon_1{
+          background: url('../../assets/img/application-control-icon-active_1.svg') no-repeat center center;
+          background-size: cover
+        }
+        .application-control-icon_2{
+          background: url('../../assets/img/application-control-icon-active_2.svg') no-repeat center center;
+          background-size: cover
+        }
+        .application-control-icon_3{
+          background: url('../../assets/img/application-control-icon-active_3.svg') no-repeat center center;
+          background-size: cover
+        }
+        .application-control-icon_4{
+          background: url('../../assets/img/application-control-icon-active_0.svg') no-repeat center center;
+          background-size: cover
+        }
+        .application-control-icon_5{
+          background: url('../../assets/img/application-control-icon-active_5.svg') no-repeat center center;
+          background-size: cover
+        }
+        .application-control-icon_6{
+          background: url('../../assets/img/application-control-icon-active_6.svg') no-repeat center center;
+          background-size: cover
+        }
+      }
+      i{
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 35px;
+        left: 0;
+      }
+    }
+    .tab-focused{
+      color: $active;
+      .application-control-icon_0{
+        background: url('../../assets/img/application-control-icon-active_0.svg') no-repeat center center;
+        background-size: cover
+      }
+      .application-control-icon_1{
+        background: url('../../assets/img/application-control-icon-active_1.svg') no-repeat center center;
+        background-size: cover
+      }
+      .application-control-icon_2{
+        background: url('../../assets/img/application-control-icon-active_2.svg') no-repeat center center;
+        background-size: cover
+      }
+      .application-control-icon_3{
+        background: url('../../assets/img/application-control-icon-active_3.svg') no-repeat center center;
+        background-size: cover
+      }
+      .application-control-icon_4{
+        background: url('../../assets/img/application-control-icon-active_0.svg') no-repeat center center;
+        background-size: cover
+      }
+      .application-control-icon_5{
+        background: url('../../assets/img/application-control-icon-active_5.svg') no-repeat center center;
+        background-size: cover
+      }
+      .application-control-icon_6{
+        background: url('../../assets/img/application-control-icon-active_6.svg') no-repeat center center;
+        background-size: cover
+      }
+    }
+    .ivu-tabs-nav .ivu-tabs-tab:last-child{
+      &::after{
+        border: none;
+      }
+    }
+  }
+  .application-control-search{
+    float: right;
+    margin: 17px 25px 0 0;
+    .application-control-search-icon{
+      width: 19px;
+      height: 19px;
+      display: inline-block;
+      margin: 12px 0;
+      background: url('../../assets/img/application-control-search-icon.svg') no-repeat center center;
+    }
+    
+  }
+}
+
+
+.application-daas{
+  overflow: hidden;
+  .application-daas-main{
+    width: $mainWidth;
+    margin: 0 auto;
+  }
+  .application-control{
+    .application-control-search{
+      padding-top: 21px;
+      .searchBtn{
+        width:96px;
+        height:44px;
+        background:$btnColor;
+        border-radius:2px;
+        border:1px solid $btnColor;
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        line-height: 44px;
+        margin-left: 16px;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover{
+          box-shadow:$btnShadow;
+        }
+      }
+      .ivu-form-item{
+        margin-bottom: 16px;
+      }
+      .daas-resource-btn{
+        float: right;
+        width: 140px;
+        height: 44px;
+        background: $btnColor;
+        border-radius: 2px;
+        color: #fff;
+        line-height: 44px;
+        text-align: center;
+        font-size:16px;
+        cursor: pointer;
+        &:hover{
+          background: $btnColor;
+          box-shadow:$btnShadow;
+        }
+      }
+      .ivu-input,.ivu-select-selection{
+        border: 0
+      }
+      .ivu-input:focus,.ivu-select-selection:focus{
+        border-color:transparent;
+        box-shadow: none;
+      }
+    }
+    
+  }
+  .application-control-table{
+    background: #fff;
+    padding: 12px 24px 46px;
+    // overflow: hidden;
+    .target{
+      position:absolute;
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+      right:0;
+      bottom:16px;
+    }
+    .ivu-table-cell,.ivu-table,.ivu-table-wrapper{
+      overflow: inherit;
+    }
+  }
+  
+}
+
+.demo{
+  .addBtn{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border-radius: 50%;
+  }
+
+  .side-nav{
+    position: fixed;
+    top: 70%;
+    right: 5%;
+    // position: absolute;
+    // left: 30px;
+    // bottom: 30px;
+    // width: 100px;
+    // text-align: center;
+    // height: 50px;
+    // line-height: 50px;
+    // border: 1px solid #ccc;
+    ul li{
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      background: #fff;
+      cursor: pointer;
+      text-align: center;
+     
+      img{
+        margin-top: 15px;
+      }
+    }
+    .ball{
+      position: fixed;
+      z-index: 100;
+      left: 70px;
+      bottom: 45px;
+      &.drop-enter-active{
+        transition: all 0.8s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+      }
+      .inner{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #F66F6A;
+        transition: all 0.8s;
+        animation: myfirst 0.8s;
+      }
+        
+    }
+      
+  }
+    
+}
+@keyframes myfirst
+{
+  0% {opacity:1;}
+  80% {opacity:0;}
+  100% {opacity:0;}
+}
+.application-center-modal{
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  .tip{
+    position: relative;
+    padding-left: 25px;
+    font-size: 16px;
+    color: #606266;
+    &::before{
+      content:"";
+      width:20px;
+      height: 20px;
+      display: inline-block;
+      background: url('~_index/assets/img/application-tip.svg') no-repeat center center;
+      background-size: cover;
+      margin-right: 5px;
+      position: absolute;
+      top: 2px;
+      left: 0;
+    }
+  }
+  .modalText{
+    font-size:18px;
+    font-weight:600;
+    color:#303133;
+  }
+  .ModalText{
+    .head{
+      font-size: 18px;
+      color: #303133;
+      overflow: hidden;
+      line-height: 44px;
+      &::before{
+        content: "";
+        width:9px;
+        height: 9px;
+        display: inline-block;
+        background: url('~_index/assets/img/require.svg') no-repeat center center;
+        background-size: cover;
+        margin-right: 5px;
+      }
+      span{
+        float: right;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        &::before{
+          content: "";
+          width:18px;
+          height: 18px;
+          display: inline-block;
+          background: url('~_index/assets/img/application-add.svg') no-repeat center center;
+          background-size: cover;
+          position: absolute;
+          top: 12px;
+          left: -24px;
+        }
+      }
+    }
+    
+  }
+  .modalFooter{
+    margin-top: 33px;
+    display: flex;
+    justify-content: center;
+    box-shadow:0px -2px 4px 0px rgba(246,111,106,0.1);
+    border-radius:0px 0px 4px 4px;
+    padding-top: 13px;
+    .btn:first-of-type{
+      margin-right: 20px;
+    }
+    .btn{
+      width: 108px;
+      height: 44px;
+      font-size: 16px;
+    }
+    .btn-cancel{
+      background: #EBEEF5;
+      color: #606266;
+    }
+    .btn-ok{
+      background: $active;
+      color: #fff;
+    }
+  }
+}

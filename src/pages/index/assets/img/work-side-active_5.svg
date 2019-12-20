@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>编组 7</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="资源总览-资源服务" transform="translate(-39.000000, -554.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="编组-7" transform="translate(40.000000, 555.000000)">
+                <path d="M7.107,7.4919 L22.107,7.4919" id="Stroke-1" stroke-linecap="round"></path>
+                <path d="M7.107,15.22665 L22.107,15.22665" id="Stroke-2" stroke-linecap="round"></path>
+                <path d="M0,2 L0,23.02825 C2.09738034e-15,24.1328195 0.8954305,25.02825 2,25.02825 L9.10875,25.02825 L12.8483643,28.7238229 C13.5808835,29.4477152 14.7433603,29.4970041 15.5345261,28.8377158 L20.106,25.02825 L27.214,25.02825 C28.3185695,25.02825 29.214,24.1328195 29.214,23.02825 L29.214,10.9485 L29.214,2 C29.214,0.8954305 28.3185695,-2.02906125e-16 27.214,0 L2,0 C0.8954305,2.02906125e-16 -1.3527075e-16,0.8954305 0,2 Z" id="Stroke-3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

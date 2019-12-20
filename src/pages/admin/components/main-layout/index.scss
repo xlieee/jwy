@@ -1,0 +1,257 @@
+// 侧边菜单-------------------------------------------------------------------
+
+.sider-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  flex-shrink: 0;
+  min-height: 100vh;
+  background: url('../../assets/img/bg_sider-menu.png') no-repeat bottom center;
+
+  box-shadow: 2px 0 6px rgba(0,21,41,.2);
+  &.ivu-layout-sider {
+    transition: none;
+  }
+  .sider-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 10px;
+    height: 64px;
+    background-color: #0B2444;
+
+    cursor: pointer;
+  }
+
+  .sider-menu {
+    overflow-y: auto;
+
+    height: calc(100vh - 64px);
+
+    font-size: 16px;
+
+    @extend %scroll;
+
+    // span {
+    //   overflow: hidden;
+    //   width: 69px;
+    //   text-overflow: ellipsis;
+    //   white-space: nowrap;
+    //   vertical-align: bottom;
+    //   opacity: 1;
+    //   transition: all .2s ease .2s;
+    // }
+    // &-collapsed {
+    //   span {
+    //     opacity: 0;
+    //     width: 0px;
+    //     transition: all .2s ease;
+    //   }
+    // }
+
+    .ivu-menu {
+      font-size: inherit;
+    }
+    .ivu-menu-item {
+      text-indent: 9px;
+      font-size: .95em;
+    }
+    .menu-item_arrow {
+      display: none;
+      float: right;
+
+      margin-top: 3px;
+    }
+    .ivu-menu-item-selected {
+      .menu-item_arrow {
+        display: block;
+      }
+    }
+  }
+  .collapsed-menu {
+    .ivu-dropdown-rel {
+      text-align: center;
+    }
+    .ivu-dropdown{
+      display: block;
+      .ivu-dropdown-rel a{
+        width: 100%;
+      }
+    }
+    .ivu-dropdown-menu {
+      min-width: 160px;
+    }
+    .ivu-dropdown-rel {
+      &:after {
+        content: '';
+        position: absolute;
+        right: -3px;
+        top: 20px;
+        border: 4px solid transparent;
+        z-index: -1;
+        transition: all .2s ease-in-out;
+      }
+      .ivu-menu-item {
+        height: 52px;
+        line-height: 52px;
+      }
+    }
+    .show-menu {
+      .ivu-dropdown-rel:after {
+        border-right-color: #101117;
+      }
+    }
+    .ivu-select-dropdown {
+      overflow: auto;
+
+      margin: 5px 0 5px 3px;
+      max-height: 350px;
+
+      background-color: #1d1e23;
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    .ivu-tooltip{
+      width: 100%;
+      .ivu-tooltip-rel{
+        width: 100%;
+      }
+      .ivu-tooltip-popper .ivu-tooltip-content{
+        .ivu-tooltip-arrow{
+          border-right-color: #fff;
+        }
+        .ivu-tooltip-inner{
+          background: #fff;
+          color: #495060;
+        }
+      }
+    }
+  }
+
+  
+  .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item-active {
+    background-color: $keys-color !important;
+    &:hover {
+      background-color: $keys-color !important;
+    }
+  }
+}
+// 页面主体---------------------------------------------------
+
+.layout-right {
+  min-height: 100vh;
+
+  .head-trigger {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    
+    text-align: center;
+    cursor: pointer;
+  
+  }
+  .layout-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px 0 0;
+
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  }
+  .header-mid {
+    flex: 1;
+  }
+  .header-right {
+    font-size: 16px;
+
+    .ivu-icon {
+      vertical-align: -4px;
+    }
+    .avatar {
+      margin-left: 24px;
+    }
+  }
+
+  & > .ivu-layout-content {
+    z-index: 99;
+    padding-top: 64px;
+  }
+  .main-view {
+    margin: 6px 24px 24px;
+    padding-top: 44px;
+  }
+  
+}
+// 页面tab部分-------------------------------------------------
+.tab-fix {
+  position: fixed;
+  z-index: 1;
+
+  background-color: $main-bg;
+  &.ivu-tabs.ivu-tabs-card>.ivu-tabs-bar {
+    border-bottom: none;
+    margin: 8px 24px;
+  
+    .ivu-tabs-tab {
+      margin-right: 6px;
+      height: 32px;
+      background: #fff;
+      border: none;
+      
+      border-radius: 2px;
+      
+      .ivu-tabs-close {
+        margin-right: -6px;
+        width: 22px;
+      
+        transform: translateZ(0);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  .layout-right {
+    .main-view {
+      margin: 6px 12px 24px;
+    }
+  }
+  .tab-fix {
+    &.ivu-tabs.ivu-tabs-card>.ivu-tabs-bar {
+      margin: 8px 12px;
+    }
+  }
+}
+// 页面header部分
+.header-dropdown,
+.msg-block {
+  cursor: pointer;
+  &:hover {
+    color: #000;
+    svg g {
+      stroke: #000;
+    }
+  }
+  .ivu-select-dropdown {
+    margin-top: 2px;
+  }
+}
+
+.icon_collapsed {
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  background: url('../../assets/img/icon_collapsed.png') no-repeat center / cover;
+}

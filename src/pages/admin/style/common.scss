@@ -1,0 +1,134 @@
+// ViewUI 样式覆盖----------------------------------------------------
+
+
+
+
+
+// 其它-----------------------------------------------------------------------
+// #app {
+//   min-width: $app-min-width;
+// }
+.svg-style {
+  vertical-align: text-bottom;
+}
+
+
+.margin-r24 {
+  margin-right: 24px;
+}
+.flex_left-right {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2
+}
+
+
+// dropdown组件fix-----------------------------------------
+.menu-dropdown-fix {
+  .sider-wrapper .collapsed-menu .ivu-select-dropdown {
+    background-color: #191a32;
+  }
+
+  .ivu-dropdown-item {
+    color: rgba(255,255,255,.7);
+    background-color: transparent;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.ivu-dropdown-item-selected,
+    &.ivu-dropdown-item-selected:hover {
+      color: #fff;
+      background-color: $theme-color;
+    }
+  }
+
+}
+.ivu-menu-item {
+  color: #fff;
+  opacity: .8;
+}
+.ivu-menu-item--actived {
+  opacity: 1;
+  background-color: #101117;
+}
+.ivu-menu-dark.ivu-menu-vertical .ivu-menu-child-item-active > .ivu-menu-submenu-title {
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+
+
+
+// tree组件fix-----------------------------------------------------------------------
+.common-tree-fix {
+  font-size: 16px;
+  ul {
+    font-size: inherit;
+  }
+  .ivu-tree-arrow {
+    width: 16px;
+    height: 16px;
+
+    vertical-align: middle;
+    font-size: 0;
+  }
+  
+  .ivu-icon {
+    position: relative;
+    &:not(.ivu-icon-ios-loading):after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 16px;
+      height: 16px;
+      background-color: $theme-color;
+
+      vertical-align: middle;
+
+      border: 1px solid $theme-color;
+      border-radius: 2px;
+    }
+    &.ivu-icon-ios-loading:before {
+      content: "\f45b";
+    }
+  }
+  .ivu-icon-ios-arrow-forward {
+    transition: none;
+    &:before {
+      content: "\F330";
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      
+      color: #fff;
+      font-size: 16px;
+      
+      transform: rotate(0);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  .ivu-tree-arrow-open {
+    .ivu-icon-ios-arrow-forward {
+      &:before {
+        content: "\F418";
+        transform: rotate(90deg);
+      }
+    }
+  } 
+}
+.tree-arrow-fix {
+  padding-left: 4px;
+  .ivu-icon {
+    vertical-align: 0;
+  }
+}
+
+
+
